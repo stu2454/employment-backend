@@ -7,9 +7,14 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 
 // Middleware
-app.use(cors({ origin: 'https://stu2454.github.io/employment-frontend',
-  optionSuccessStatus: 200
- })); // Updated CORS origin for GitHub Pages
+app.use(cors({
+  origin: 'https://stu2454.github.io/employment-frontend', // Allow GitHub Pages URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  optionsSuccessStatus: 200 // Ensures 200 response for preflight requests
+}));
+ 
+ // Updated CORS origin for GitHub Pages
 app.use(express.json());
 app.options('*', cors());
 
