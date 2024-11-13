@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5001;
 
 // Middleware
 app.use(cors({
-  origin: 'https://stu2454.github.io/employment-frontend', // Allow GitHub Pages URL
+  origin: 'https://stu2454.github.io', // Allow GitHub Pages URL
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   optionsSuccessStatus: 200 // Ensures 200 response for preflight requests
