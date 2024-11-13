@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 
 // Middleware
-app.use(cors({ origin: 'https://stusmith2454.github.io/employment-frontend' })); // Updated CORS origin for GitHub Pages
+app.use(cors({ origin: 'https://stu2454.github.io/employment-frontend' })); // Updated CORS origin for GitHub Pages
 app.use(express.json());
 
 // Log MongoDB URI for troubleshooting (can be removed in production)
